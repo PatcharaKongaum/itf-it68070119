@@ -13,3 +13,14 @@ nav {
     margin: 10px;
     padding: 10px;
 }
+
+.picture {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.context {
+    display: flex;
+    padding-bottom: 20px;
+}
