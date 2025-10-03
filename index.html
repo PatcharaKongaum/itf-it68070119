@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Patchara Kongaum</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,6 +13,7 @@
         <p>Week 14</p>
     </nav>
     <div class="content">
+        <!-- Account Information -->
         <h3>Account Information</h3>
         <div class="context">
             <div class="picture">
@@ -22,32 +23,49 @@
                 <h3>Account Overview</h3>
                 <p>
                     Name : Patchara Kongaum <br>
-                    Type : Saving Account
+                    Type : Savings Account
                 </p>
             </div>
         </div>
-        <div class="context" style="padding-bottom: 20px;">
+
+        <!-- Balance Information -->
+        <div class="context">
             <div class="picture">
-                <img src="assets/safe.png" alt="user" style="width: 100px;">
+                <img src="assets/safe.png" alt="safe" style="width: 100px;">
             </div>
             <div class="detail">
                 <h3>Balance Information</h3>
                 <div class="context">
                     <p>Current account Balance :</p> 
-                    <input type="number" id="myinput" value="0">
+                    <input type="number" id="accountBalance" value="0" style="color: blue">
                 </div>
                 <div class="context">
                     <p>Current cash Balance :</p>
-                    <input type="number" id="myinput" value="0">
+                    <input type="number" id="cashBalance" value="0" style="color: blue">
                 </div>
-                <button>Change data</button>
+                <button onclick="updateBalance()">Change data</button>
             </div>
         </div>
 
-        <div>
-            Enter number: <input type="number" id="myinput" value="0">
-            <button onclick="add()">+1</button>
+        <!-- Bank Operation -->
+        <div class="context">
+            <div class="picture">
+                <img src="assets/banknote.png" alt="atm" style="width: 100px;">
+            </div>
+            <div class="detail">
+                <h3>Bank Operation</h3>
+                <select id="operation">
+                    <option value="deposit">Deposit</option>
+                    <option value="withdraw">Withdraw</option>
+                </select>
+                <input type="number" id="amount" value="0">
+                <button onclick="bankOperation()">Proceed</button>
+            </div>
         </div>
+
+        <!-- Transaction Log -->
+        <h3>Transaction Log</h3>
+        <div id="log"></div>
     </div>
     <script src="script.js"></script>
 </body>
