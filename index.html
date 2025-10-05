@@ -13,59 +13,83 @@
         <p>Week 14</p>
     </nav>
     <div class="content">
-        <!-- Account Information -->
-        <h3>Account Information</h3>
-        <div class="context">
-            <div class="picture">
-                <img src="assets/user.png" alt="user" style="width: 100px;">
-            </div>
-            <div class="detail">
-                <h3>Account Overview</h3>
-                <p>
-                    Name : Patchara Kongaum <br>
-                    Type : Savings Account
-                </p>
-            </div>
-        </div>
-
-        <!-- Balance Information -->
-        <div class="context">
-            <div class="picture">
-                <img src="assets/safe.png" alt="safe" style="width: 100px;">
-            </div>
-            <div class="detail">
-                <h3>Balance Information</h3>
-                <div class="context">
-                    <p>Current account Balance :</p> 
-                    <input type="number" id="accountBalance" value="0" style="color: blue">
+        <div>
+            <!-- Account Information -->
+            <h3>Account Information</h3>
+            <div class="context">
+                <div class="picture">
+                    <img src="assets/user.png" alt="user" style="width: 100px;">
                 </div>
-                <div class="context">
-                    <p>Current cash Balance :</p>
-                    <input type="number" id="cashBalance" value="0" style="color: blue">
+                <div class="detail">
+                    <h3>Account Overview</h3>
+                    <p>
+                        Name : Patchara Kongaum <br>
+                        Type : Savings Account
+                    </p>
                 </div>
-                <button onclick="updateBalance()">Change data</button>
+            </div>
+    
+            <!-- Balance Information -->
+            <div class="context">
+                <div class="picture">
+                    <img src="assets/safe.png" alt="safe" style="width: 100px;">
+                </div>
+                <div class="detail">
+                    <h3>Balance Information</h3>
+                    <div class="context">
+                        <p>Current account Balance :</p> 
+                        <input type="number" id="accountBalance" value="0" style="color: blue">
+                    </div>
+                    <div class="context">
+                        <p>Current cash Balance :</p>
+                        <input type="number" id="cashBalance" value="0" style="color: blue">
+                    </div>
+                    <button onclick="updateBalance()">Change data</button>
+                </div>
+            </div>
+    
+            <!-- Bank Operation -->
+            <div class="context">
+                <div class="picture">
+                    <img src="assets/banknote.png" alt="atm" style="width: 100px;">
+                </div>
+                <div class="detail">
+                    <h3>Bank Operation</h3>
+                    <select id="operation">
+                        <option value="deposit">Deposit</option>
+                        <option value="withdraw">Withdraw</option>
+                    </select>
+                    <input type="number" id="amount" value="0">
+                    <button onclick="bankOperation()">Proceed</button>
+                </div>
             </div>
         </div>
-
-        <!-- Bank Operation -->
-        <div class="context">
-            <div class="picture">
-                <img src="assets/banknote.png" alt="atm" style="width: 100px;">
-            </div>
-            <div class="detail">
-                <h3>Bank Operation</h3>
-                <select id="operation">
-                    <option value="deposit">Deposit</option>
-                    <option value="withdraw">Withdraw</option>
-                </select>
-                <input type="number" id="amount" value="0">
-                <button onclick="bankOperation()">Proceed</button>
+        <div>
+            <!-- Currency -->
+            <h3>Currency Converter</h3>
+            <div class="context">
+                <div class="picture">
+                    <img src="assets/coins.png" alt="user" style="width: 100px;">
+                </div>
+                <div class="detail">
+                    <p>Currency Converter</p>
+                    Input Balance
+                    <input type="number" id="thbInput" value="0">
+                    <br>
+                    Output Balance
+                    <input type="number" id="usdOutput" value="0" readonly>
+                    <br>
+                    <button onclick="convertCurrency()">Convert</button>
+                </div>
             </div>
         </div>
-
-        <!-- Transaction Log -->
-        <h3>Transaction Log</h3>
-        <div id="log"></div>
+    </div>
+    <div style="margin: 10px; padding: 10px;">
+        <div>
+            <!-- Transaction Log -->
+            <h3>Transaction Log</h3>
+            <div id="log"></div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
